@@ -1,0 +1,55 @@
+@import "colors.css";
+@font-face {
+  font-family: "Montsterrat";
+  src: url("/assets/font/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+html {
+  font-size: 16px;
+  font-family: "Montsterrat";
+}
+
+.main-header {
+  color: var(--header-text-color);
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  line-height: 5rem;
+}
+.header-tag {
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  letter-spacing: 0.1px;
+}
+.subheader {
+  color: var(--primary-text-color);
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.8rem;
+  letter-spacing: 0.2px;
+}
+.contact-us {
+  padding: 1rem 2.5rem;
+  background-color: var(--primary-background-color);
+  border-radius: 5px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.secondary-line {
+  width: 4rem;
+  height: 0.125rem;
+  background-color: var(--primary-background-color);
+}
+.primary-line {
+  width: 6rem;
+  height: 0.5rem;
+  background-color: var(--primary-background-color);
+}
+.description{
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.2px;
+    color: var(--primary-text-color);
+}
