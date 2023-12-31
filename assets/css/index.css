@@ -67,7 +67,6 @@ html {
 
 .main-section {
   padding: 0 12rem;
-
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -102,14 +101,29 @@ html {
     display: none;
   }
   .main-section {
-    padding: 0;
-    display: block;
+    padding:0 4rem;
+
   }
+ .main-page-bg-image{
+  background-position: auto;
+  background-size: contain;
+ }
+ .info-cards-container{
+  flex-direction: column;
+ }
+ .info-card{
+  width: max-content;
+  gap: .2rem;
+  max-width: 70%;
+ }
+ .info-card img {
+  max-width: 4rem;
+  max-height: 4rem;
+}
 }
 .info-cards-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 2rem;
 }
 .info-card {
