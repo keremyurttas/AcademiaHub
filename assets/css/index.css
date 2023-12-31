@@ -3,6 +3,7 @@
   font-family: "Montsterrat";
   src: url("/assets/font/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
+
 html {
   font-size: 16px;
   font-family: "Montsterrat";
@@ -36,6 +37,9 @@ html {
   color: white;
   font-size: 0.8rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  max-width: max-content;
 }
 .secondary-line {
   width: 4rem;
@@ -47,9 +51,58 @@ html {
   height: 0.5rem;
   background-color: var(--primary-background-color);
 }
-.description{
-    font-size: 0.9rem;
-    line-height: 1.25rem;
-    letter-spacing: 0.2px;
-    color: var(--primary-text-color);
+.description {
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.2px;
+  color: var(--primary-text-color);
+}
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2rem;
+  letter-spacing: 0.1px;
+  color: var(--header-text-color);
+}
+
+.main-section {
+  padding: 0 12rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+.main-page-bg-image {
+  background-image: url("/assets/images/main-page-cover.png");
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+}
+.navbar {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 8px;
+    padding: 1rem;
+  }
+  .arrow {
+    display: none;
+  }
+  .main-section {
+    padding: 0;
+    display: block;
+  }
 }
