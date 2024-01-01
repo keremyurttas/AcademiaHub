@@ -8,6 +8,12 @@ html {
   font-size: 16px;
   font-family: "Montsterrat";
 }
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  padding-bottom: 5rem;
+}
 
 .main-header {
   color: var(--header-text-color);
@@ -15,6 +21,13 @@ html {
   font-weight: bold;
   letter-spacing: 0.2px;
   line-height: 5rem;
+}
+.secondary-header {
+  color: var(--header-text-color);
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  line-height: 3rem;
 }
 .header-tag {
   color: var(--secondary-text-color);
@@ -92,35 +105,7 @@ html {
   flex-direction: column;
   gap: 2rem;
 }
-@media only screen and (max-width: 768px) {
-  html {
-    font-size: 8px;
-    padding: 1rem;
-  }
-  .arrow {
-    display: none;
-  }
-  .main-section {
-    padding:0 4rem;
 
-  }
- .main-page-bg-image{
-  background-position: auto;
-  background-size: contain;
- }
- .info-cards-container{
-  flex-direction: column;
- }
- .info-card{
-  width: max-content;
-  gap: .2rem;
-  max-width: 70%;
- }
- .info-card img {
-  max-width: 4rem;
-  max-height: 4rem;
-}
-}
 .info-cards-container {
   display: flex;
   justify-content: space-between;
@@ -137,4 +122,54 @@ html {
 .info-card img {
   width: 70px;
   height: 76px;
+}
+.second-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+.second-section-content {
+  max-width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.sponsors-container {
+  display: flex;
+  justify-content: space-between;
+}
+.second-section-container {
+  padding: 0 12rem;
+}
+.footer-container {
+  padding: 12rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
+.footer-header {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  letter-spacing: 0.1px;
+}
+.footer-container ul li,.footer-bottom {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.footer-last-column li{
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+}
+.footer-bottom{
+  display: flex;
+  padding: 0 12rem;
+  justify-content: space-between;
+}
+.footer-bottom-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
