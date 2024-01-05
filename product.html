@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/font/font.css" />
+    <link rel="stylesheet" href="./assets/style/normalize.css" />
+    <link rel="stylesheet" href="./assets/style/css/general/index.css" />
+    <link rel="stylesheet" href="./assets/style/css/general/footer.css">
+    <link rel="stylesheet" href="./assets/style/css/general/header.css">
+    <title>Document</title>
+    <script type="module" src="./js/main.js"></script>
+
+  </head>
+  <body>
+    <section class="container">
+      <div class="product">
+        <img class="product-image" alt="product image" />
+        <div class="product-details">
+          <div class="header-container">
+            <h2 class="header"></h2>
+            <h4 class="header-tag"></h4>
+          </div>
+          <span class="description"></span>
+          <div class="product-details-bottom">
+            <div class="prices">
+              <span class="old-price"> </span> <span class="new-price"></span>
+            </div>
+            <div class="sales-count">
+              <img src="./assets/images/saled.svg" alt="" /><span></span>
+            </div>
+          </div>
+          <a href="https://wa.me/1234567890" class="get-contact">
+            <img src="./assets/images/whatsapp.svg" alt="" /> Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<style>
+  @import "./assets/style/css/colors/colors.css";
+
+  /* .course-card-top img{
+  width: 150%;
+} */
+  .product-image {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+  .product {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 12rem;
+    margin: 4rem 0;
+    width: max-content;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-container h2 {
+    font-size: 2rem;
+  }
+  .header-container h4 {
+    font-size: 1rem;
+  }
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: var(--secondary-background-color);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .product-details-bottom span {
+    font-size: 1.5rem;
+  }
+  .product-details-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sales-count img {
+    width: 24px;
+  }
+  .sales-count {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  .sales-count span {
+    color: var(--primary-text-color);
+  }
+  .old-price {
+    color: white;
+    margin-right: 1rem;
+  }
+  .new-price {
+    color: var(--secondary-text-color);
+  }
+  .prices {
+    font-size: 1rem;
+  }
+  .get-contact img {
+    width: 40px;
+  }
+  .get-contact {
+    font-size: 1.5rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: auto;
+    padding: 1rem;
+    background-color: rgb(43, 204, 43);
+  }
+  .description {
+    color: white;
+    font-size: 1rem;
+  }
+  @media only screen and (max-width: 768px) {
+    .product {
+      margin: auto;
+    }
+  }
+</style>
+<script type="module">
+  import { courseInformations } from "/js/data.js";
+  import createCourseCard from "/components/CourseCard.js";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    // Convert the id to a number if needed
+    const courseId = parseInt(id, 10);
+
+    const courseToShow = courseInformations.find(
+      (course) => course.id === courseId
+    );
+    // const course = createCourseCard(courseToShow);
+    // const container = document.querySelector(".product");
+    // container.appendChild(course);
+    console.log(courseToShow);
+    document
+      .querySelector(".product-image")
+      .setAttribute("src", courseToShow.img);
+    document.querySelector(".header-tag").innerHTML = courseToShow.productTag;
+    document.querySelector(".header").innerHTML = courseToShow.productName;
+    document.querySelector(".description").innerHTML =
+      courseToShow.productDescription;
+    document.querySelector(".old-price").innerHTML =
+      "$" + courseToShow.oldPrice;
+    document.querySelector(".new-price").innerHTML =
+      "$" + courseToShow.newPrice;
+
+    document.querySelector(".sales-count span").innerHTML =
+      courseToShow.saleCount;
+  });
+</script>

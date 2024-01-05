@@ -7,74 +7,103 @@
     <link rel="stylesheet" href="./assets/style/normalize.css" />
     <link rel="stylesheet" href="./assets/style/font/font.css" />
     <link rel="stylesheet" href="./assets/style/css/general/index.css" />
-    <link rel="stylesheet" href="./assets/style/css/mobile/mobile.css" />
+    <link rel="stylesheet" href="./assets/style/css/general/footer.css" />
+    <link rel="stylesheet" href="./assets/style/css/general/header.css" />
 
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
-    <section class="container main-page-bg-image">
-      <div class="main-section">
-        <iframe src="./components/header.html" frameborder="0"></iframe>
-        <div class="">
-          <div class="content">
-            <h5 class="header-tag">For Better Future</h5>
-            <h2 class="main-header">
-              HIGH QUALITY <br />
-              COURSES
-            </h2>
-            <span class="subheader"
-              >Every day brings with it a fresh <br />
-              set of learning possibilities.</span
-            >
-            <button class="contact-us">Contact Us</button>
+    <div class="main-page">
+      <section class="container main-page-bg-image">
+        <div class="main-section">
+          <!-- <iframe src="./components/header.html" frameborder="0"></iframe> -->
+          <div class="">
+            <div class="content">
+              <h5 class="header-tag">For Better Future</h5>
+              <h2 class="main-header">
+                HIGH QUALITY <br />
+                COURSES
+              </h2>
+              <span class="subheader"
+                >Every day brings with it a fresh <br />
+                set of learning possibilities.</span
+              >
+              <a href="#courses" class="contact-us">See Our Courses</a>
+            </div>
+          </div>
+          <div class="info-cards-container">
+            <!-- cards will render here -->
           </div>
         </div>
-        <div class="info-cards-container">
-          <!-- cards will render here -->
+      </section>
+      <section class="container">
+        <div class="second-section">
+          <img
+            src="./assets/images/placeholder.png"
+            alt="a placeholder image"
+          />
+          <div class="second-section-content">
+            <hr class="primary-line" />
+            <h3 class="secondary-header">
+              Get Quality <br />
+              Education
+            </h3>
+            <p class="description">
+              Problems trying to resolve the conflict between the two major
+              realms of Classical physics: Newtonian mechanics
+            </p>
+            <a href="#courses" class="contact-us">See Our Courses</a>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="container">
-      <div class="second-section">
-        <img src="./assets/images/placeholder.png" alt="a placeholder image" />
-        <div class="second-section-content">
-          <hr class="primary-line" />
-          <h3 class="secondary-header">
-            Get Quality <br />
-            Education
-          </h3>
-          <p class="description">
-            Problems trying to resolve the conflict between the two major realms
-            of Classical physics: Newtonian mechanics
-          </p>
-          <button class="contact-us">Contact us</button>
+        <div class="sponsors-container">
+          <a target="_blank" href="https://hooli.fi/"
+            ><img src="./assets/images/fa-brands-1.svg" alt=""
+          /></a>
+          <a target="_blank" href="https://www.lyft.com/"
+            ><img src="./assets/images/fa-brands-2.svg" alt=""
+          /></a>
+          <a target="_blank" href="https://www.unep.org/"
+            ><img src="./assets/images/fa-brands-3.svg" alt=""
+          /></a>
+          <a target="_blank" href="https://stripe.com/"
+            ><img src="./assets/images/fa-brands-4.svg" alt=""
+          /></a>
+          <a target="_blank" href="https://aws.amazon.com/"
+            ><img src="./assets/images/fa-brands-5.svg" alt=""
+          /></a>
+          <a target="_blank" href="https://www.reddit.com/"
+            ><img src="./assets/images/fa-brands-6.svg" alt=""
+          /></a>
         </div>
-      </div>
-      <div class="sponsors-container">
-        <a target="_blank" href="https://hooli.fi/"
-          ><img src="./assets/images/fa-brands-1.svg" alt=""
-        /></a>
-        <a target="_blank" href="https://www.lyft.com/"
-          ><img src="./assets/images/fa-brands-2.svg" alt=""
-        /></a>
-        <a target="_blank" href="https://www.unep.org/"
-          ><img src="./assets/images/fa-brands-3.svg" alt=""
-        /></a>
-        <a target="_blank" href="https://stripe.com/"
-          ><img src="./assets/images/fa-brands-4.svg" alt=""
-        /></a>
-        <a target="_blank" href="https://aws.amazon.com/"
-          ><img src="./assets/images/fa-brands-5.svg" alt=""
-        /></a>
-        <a target="_blank" href="https://www.reddit.com/"
-          ><img src="./assets/images/fa-brands-6.svg" alt=""
-        /></a>
-      </div>
-    </section>
-    <iframe
+      </section>
+      <section class="container courses-section-container">
+        <div class="courses-section">
+          <div class="courses-content">
+            <h6 id="courses" class="header-tag">Practice Advice</h6>
+            <h3 class="secondary-header">Our Popular Courses</h3>
+            <p class="description">
+              Problems trying to resolve the conflict between <br />
+              the two major realms of Classical physics: Newtonian mechanics
+            </p>
+          </div>
+          <div class="course-cards"></div>
+        </div>
+      </section>
+    </div>
+    <!-- <iframe
       src="./components/footer.html"
       frameborder="0"
-      height="270px"
-    ></iframe>
+    ></iframe> -->
   </body>
+  <script type="module">
+    import {
+      renderCourseCards,
+      renderInformationCards,
+    } from "/js/cardRenderer.js";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderInformationCards();
+      renderCourseCards();
+    });
+  </script>
 </html>

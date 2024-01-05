@@ -351,25 +351,36 @@ template {
 }
 
 /* My own adjustments */
+* {
+  box-sizing: border-box;
+}
 button,
 hr {
   border: none;
   margin: 0;
-
 }
-h1,h2,h3,h4,h5,h6{
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
 }
-button{
+button {
   cursor: pointer;
 }
-ul{
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-*{
-box-sizing: border-box;}
+
+a {
+  cursor: pointer;
+  color: inherit;
+}

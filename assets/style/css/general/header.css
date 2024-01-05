@@ -1,11 +1,15 @@
 @import "../colors/colors.css";
 
 .navbar {
-    padding: 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  position: absolute;
+  left: 50%;
+  top: 3rem;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+}
 .contact-us {
   padding: 1rem 2.5rem;
   background-color: var(--primary-background-color);
@@ -15,13 +19,13 @@
   font-weight: bold;
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
   max-width: max-content;
 }
 .brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 2rem;
-    letter-spacing: 0.1px;
-    color: var(--header-text-color);
-  }
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2rem;
+  letter-spacing: 0.1px;
+  color: var(--header-text-color);
+}
