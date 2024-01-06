@@ -1,0 +1,98 @@
+@import "./assets/style/css/colors/colors.css";
+
+.product-image {
+  
+    height: 10%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.product-image, .product-details{
+    width: 30vw;
+    margin: auto;
+}
+.product {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container h2 {
+  font-size: 2rem;
+}
+.header-container h4 {
+  font-size: 1rem;
+}
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: var(--secondary-background-color);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+}
+.product-details-bottom span {
+  font-size: 1.5rem;
+}
+.product-details-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sales-count img {
+  width: 24px;
+}
+.sales-count {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.sales-count span {
+  color: var(--primary-text-color);
+}
+.old-price {
+  color: white;
+  margin-right: 1rem;
+}
+.new-price {
+  color: var(--secondary-text-color);
+}
+.prices {
+  font-size: 1rem;
+}
+.get-contact img {
+  width: 40px;
+}
+.get-contact {
+  font-size: 1.5rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: auto;
+  padding: 1rem;
+  background-color: var(--tertary-background-color)
+}
+.product-details .description {
+  color: white;
+  font-size: 1rem;
+}
+@media only screen and (max-width: 768px) {
+.sales-count img{
+    width: 15px;
+} 
+.sales-count{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+  .product-image,.product-details{
+    width: 100%;
+  }
+}

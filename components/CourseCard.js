@@ -10,6 +10,7 @@ export default function createCourseCard({
 }) {
   const courseCard = document.createElement("div");
   courseCard.classList.add("course-card");
+  // courseCard.classList.add("zoom-hover-effect");
   courseCard.innerHTML = `
 
   <div class="course-card-top">
