@@ -1,6 +1,7 @@
 export default function createInformationCard(source, header, description) {
-  const informationCard = document.createElement("section");
+  const informationCard = document.createElement("div");
   informationCard.classList.add("info-card");
+  informationCard.classList.add("card-hover-effect");
   informationCard.innerHTML = `
 
     <img

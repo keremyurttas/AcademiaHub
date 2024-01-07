@@ -1,5 +1,9 @@
 @import "./assets/style/css/colors/colors.css";
 
+section{
+  opacity: 1;
+}
+
 .product-image {
   
     height: 10%;

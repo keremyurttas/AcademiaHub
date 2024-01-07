@@ -9,7 +9,10 @@
   align-items: center;
   justify-content: space-between;
   width: 100vw;
+  z-index: 10;
+
 }
+
 .contact-us {
   padding: 1rem 2.5rem;
   background-color: var(--primary-background-color);
@@ -21,6 +24,7 @@
   align-items: center;
   gap: 0.5rem;
   max-width: max-content;
+
 }
 .brand {
   font-size: 1.5rem;
@@ -29,3 +33,14 @@
   letter-spacing: 0.1px;
   color: var(--header-text-color);
 }
+.scrolled {
+  width: 100vw;
+  position: sticky;
+  left: inherit;
+  transform: inherit;
+  top: 0;
+  padding: 1rem 12rem;
+  background-color:white;
+
+}
+

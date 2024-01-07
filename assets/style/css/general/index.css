@@ -27,6 +27,7 @@ body {
   gap: 10rem;
   margin-bottom: 8rem;
 }
+
 .main-header {
   color: var(--header-text-color);
   font-size: 3.5rem;
@@ -61,11 +62,19 @@ body {
   width: 4rem;
   height: 0.125rem;
   background-color: var(--primary-background-color);
+  transition-duration: 0.8s;
+}
+.info-card:hover .secondary-line {
+  width: 100%;
 }
 .primary-line {
   width: 6rem;
   height: 0.5rem;
   background-color: var(--primary-background-color);
+  transition-duration: 0.8s;
+}
+.second-section-content:hover .primary-line {
+  width: 100%;
 }
 .description {
   font-size: 0.9rem;
@@ -212,12 +221,14 @@ body {
 .course-card-content-top .header-tag {
   font-size: 0.9rem;
 }
-.course-card {
-  width: min-content;
+.course-card,
+.info-card {
   cursor: pointer;
 }
-.course-card:hover {
+.card-hover-effect {
   transition-duration: 300ms;
+}
+.card-hover-effect:hover {
   transform: scale(1.1);
 }
 .course-card:hover a.view {
@@ -337,4 +348,35 @@ body {
 .zoom-hover-effect:hover {
   transition-duration: 300ms;
   transform: scale(1.2);
+}
+/* .main-page .content {
+  position: sticky;
+  top: 0;
+  translate: 0 calc(-1% * (max(var(--scroll), 25)-25) * 100 / 75);
+} */
+section {
+  opacity: 0;
+  transform: translateX(300px);
+  transition: 500ms;
+}
+section.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+.sponsors-container{
+overflow: hidden;
+position: relative;
+width: 100%;
+
+}
+.slide-track{
+  display: flex;
+  animation: scroll 10s linear infinite;
+}
+.slide-track a{
+  width: 200px;
+}
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-200px * 6))}
 }

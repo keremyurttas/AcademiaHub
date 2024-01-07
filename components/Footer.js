@@ -1,6 +1,6 @@
 export default function createFooter() {
   const footer = document.createElement("footer");
-  footer.innerHTML = `  <section class='container'>
+  footer.innerHTML = `  <div class='container'>
     <div class="footer-container">
       <ul>
         <li class="footer-header">Company Info</li>
@@ -63,6 +63,6 @@ export default function createFooter() {
         /></a>
       </div>
     </div>
-  </section>`;
+  </div>`;
   return footer;
 }

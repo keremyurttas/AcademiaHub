@@ -17,20 +17,22 @@
       <section class="container main-page-bg-image">
         <div class="main-section">
           <!-- <iframe src="./components/header.html" frameborder="0"></iframe> -->
-         
-            <div class="content">
-              <h5 class="header-tag">For Better Future</h5>
-              <h2 class="main-header">
-                HIGH QUALITY <br />
-                COURSES
-              </h2>
-              <span class="subheader"
-                >Every day brings with it a fresh <br />
-                set of learning possibilities.</span
-              >
-              <a href="#courses" class="contact-us zoom-hover-effect">See Our Courses</a>
-            </div>
-    
+
+          <div class="content">
+            <h5 class="header-tag">For Better Future</h5>
+            <h2 class="main-header">
+              HIGH QUALITY <br />
+              COURSES
+            </h2>
+            <span class="subheader"
+              >Every day brings with it a fresh <br />
+              set of learning possibilities.</span
+            >
+            <a href="#courses" class="contact-us zoom-hover-effect"
+              >See Our Courses</a
+            >
+          </div>
+
           <div class="info-cards-container">
             <!-- cards will render here -->
           </div>
@@ -42,7 +44,7 @@
             src="./assets/images/placeholder.png"
             alt="a placeholder image"
           />
-          <div class="second-section-content">
+          <div class="second-section-content card-hover-effect">
             <hr class="primary-line" />
             <h3 class="secondary-header">
               Get Quality <br />
@@ -52,11 +54,32 @@
               Problems trying to resolve the conflict between the two major
               realms of Classical physics: Newtonian mechanics
             </p>
-            <a href="#courses" class="contact-us zoom-hover-effect">See Our Courses</a>
+            <a href="#courses" class="contact-us zoom-hover-effect"
+              >See Our Courses</a
+            >
           </div>
         </div>
         <div class="sponsors-container">
-          <a target="_blank" href="https://hooli.fi/"
+          <div class="slide-track">
+            <a target="_blank" href="https://hooli.fi/"
+              ><img src="./assets/images/fa-brands-1.svg" alt=""
+            /></a>
+            <a target="_blank" href="https://www.lyft.com/"
+              ><img src="./assets/images/fa-brands-2.svg" alt=""
+            /></a>
+            <a target="_blank" href="https://www.unep.org/"
+              ><img src="./assets/images/fa-brands-3.svg" alt=""
+            /></a>
+            <a target="_blank" href="https://stripe.com/"
+              ><img src="./assets/images/fa-brands-4.svg" alt=""
+            /></a>
+            <a target="_blank" href="https://aws.amazon.com/"
+              ><img src="./assets/images/fa-brands-5.svg" alt=""
+            /></a>
+            <a target="_blank" href="https://www.reddit.com/"
+              ><img src="./assets/images/fa-brands-6.svg" alt=""
+            /></a>
+            <a target="_blank" href="https://hooli.fi/"
             ><img src="./assets/images/fa-brands-1.svg" alt=""
           /></a>
           <a target="_blank" href="https://www.lyft.com/"
@@ -74,6 +97,7 @@
           <a target="_blank" href="https://www.reddit.com/"
             ><img src="./assets/images/fa-brands-6.svg" alt=""
           /></a>
+          </div>
         </div>
       </section>
       <section class="container courses-section-container">
@@ -93,6 +117,8 @@
       </section>
     </div>
   </body>
+  <script src="./js/scrollEffect.js"></script>
+
   <script type="module">
     import {
       renderCourseCards,

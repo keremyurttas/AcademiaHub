@@ -15,5 +15,15 @@ export default function createHeader() {
       </a>
      
   `;
+  const mainPage = document.querySelector(".main-page");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      header.classList.add("scrolled");
+      mainPage.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+      mainPage.classList.remove("scrolled");
+    }
+  });
   return header;
 }

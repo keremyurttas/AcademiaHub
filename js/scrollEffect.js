@@ -1,14 +1,13 @@
-// window.addEventListener("scroll", setScrollVar);
-// window.addEventListener("resize", setScrollVar);
+const sections = document.querySelectorAll("section");
 
-// function setScrollVar() {
-//   const htmlElement = document.documentElement;
-//   const persentageOfScreenHeightScrolled =
-//     htmlElement.scrollTop / htmlElement.clientHeight;
-//   console.log(Math.min(persentageOfScreenHeightScrolled * 100, 100));
-//   htmlElement.style.setProperty(
-//     "--scroll",
-//     Math.min(persentageOfScreenHeightScrolled * 100, 100)
-//   );
-// }
-// setScrollVar();
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+    });
+  },
+  { threshold: 0.3 }
+);
+sections.forEach((section) => {
+  observer.observe(section);
+});
