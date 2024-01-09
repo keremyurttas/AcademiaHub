@@ -10,41 +10,37 @@
     <link rel="stylesheet" href="./assets/style/css/general/header.css" />
     <link rel="stylesheet" href="./assets/style/css/general/product.css" />
 
-
-    <title>Document</title>
+    <title>Course</title>
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
-  
-      <div class="product">
-        <img class="product-image" alt="product image" />
-        <div class="product-details">
-          <div class="header-container">
-            <h2 class="header"></h2>
-            <h4 class="header-tag"></h4>
-          </div>
-          <span class="description"></span>
-          <div class="product-details-bottom">
-            <div class="prices">
-              <span class="old-price"> </span> <span class="new-price"></span>
-            </div>
-            <div class="sales-count">
-              <img src="./assets/images/saled.svg" alt="" /><span></span>
-            </div>
-          </div>
-          <a href="https://wa.me/1234567890" class="get-contact">
-            <img src="./assets/images/whatsapp.svg" alt="" /> Contact Us
-          </a>
+    <div class="product">
+      <img class="product-image" alt="product image" />
+      <div class="product-details">
+        <div class="header-container">
+          <h2 class="header"></h2>
+          <h4 class="header-tag"></h4>
         </div>
+        <span class="description"></span>
+        <div class="product-details-bottom">
+          <div class="prices">
+            <span class="old-price"> </span> <span class="new-price"></span>
+          </div>
+          <div class="sales-count">
+            <img src="./assets/images/saled.svg" alt="" /><span></span>
+          </div>
+        </div>
+        <a href="https://wa.me/1234567890" class="get-contact">
+          <img src="./assets/images/whatsapp.svg" alt="" /> Contact Us
+        </a>
       </div>
-
+    </div>
   </body>
 </html>
 
 <script type="module">
   import { courseInformations } from "/js/data.js";
   import createCourseCard from "/components/CourseCard.js";
-
   document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
@@ -55,23 +51,25 @@
     const courseToShow = courseInformations.find(
       (course) => course.id === courseId
     );
-    // const course = createCourseCard(courseToShow);
-    // const container = document.querySelector(".product");
-    // container.appendChild(course);
-    console.log(courseToShow);
-    document
-      .querySelector(".product-image")
-      .setAttribute("src", courseToShow.img);
-    document.querySelector(".header-tag").innerHTML = courseToShow.productTag;
-    document.querySelector(".header").innerHTML = courseToShow.productName;
-    document.querySelector(".description").innerHTML =
-      courseToShow.productDescription;
-    document.querySelector(".old-price").innerHTML =
-      "$" + courseToShow.oldPrice;
-    document.querySelector(".new-price").innerHTML =
-      "$" + courseToShow.newPrice;
+    document.title = "Course: " + courseToShow.productName;
+    prepareCourse(courseToShow);
+  });
 
-    document.querySelector(".sales-count span").innerHTML =
-      courseToShow.saleCount;
+  function prepareCourse(course) {
+    document.querySelector(".product-image").setAttribute("src", course.img);
+    document.querySelector(".header-tag").innerHTML = course.productTag;
+    document.querySelector(".header").innerHTML = course.productName;
+    document.querySelector(".description").innerHTML =
+      course.productDescription;
+    document.querySelector(".old-price").innerHTML = "$" + course.oldPrice;
+    document.querySelector(".new-price").innerHTML = "$" + course.newPrice;
+
+    document.querySelector(".sales-count span").innerHTML = course.saleCount;
+  }
+  // Block image zoom when hovering if rotate y animation is active
+  const product = document.querySelector(".product");
+  const productImage = document.querySelector(".product-image");
+  product.addEventListener("animationend", () => {
+    productImage.classList.add("product-image-zoom-on-hover");
   });
 </script>

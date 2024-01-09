@@ -1,6 +1,6 @@
 export default function createFooter() {
   const footer = document.createElement("footer");
-  footer.innerHTML = `  <div class='container'>
+  footer.innerHTML = `  <div class="container">
     <div class="footer-container">
       <ul>
         <li class="footer-header">Company Info</li>
@@ -34,16 +34,17 @@ export default function createFooter() {
       <ul class="footer-last-column">
         <li class="footer-header">Get In Touch</li>
         <li class="description">
-          <img src="../assets/images/phone.svg" alt="a phone icon" />(480)
-          555-0103
+        <a href="tel:+4805550103">
+          <img src="../assets/images/phone.svg"alt="a phone icon" />(480) 555-0103
+          </a>
         </li>
         <li class="description">
-          <img src="../assets/images/map.svg" alt="a map icon" />4517
-          Washington Ave. Manchester, Kentucky 39495
+        <address><img src="../assets/images/map.svg" alt="a map icon" />4517 Washington Ave. Manchester, Kentucky 39495</address>
         </li>
         <li class="description">
+        <a href="mailto:debra.holt@example.com">
           <img src="../assets/images/mail.svg" alt="a mail icon" />
-          debra.holt@example.com
+          debra.holt@example.com</a> 
         </li>
       </ul>
     </div>

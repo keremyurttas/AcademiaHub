@@ -17,7 +17,7 @@
 .footer-last-column {
   width: 25%;
 }
-.footer-last-column li {
+.footer-last-column li > * {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -31,9 +31,11 @@
   gap: 1rem;
   align-items: center;
 }
+.footer-container .description {
+  cursor: pointer;
+}
 @media only screen and (max-width: 768px) {
   .footer-container {
-    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 3rem;
   }
   .footer-container img,
@@ -41,7 +43,7 @@
     width: 2rem;
     height: 2rem;
   }
-  .footer-last-column li:last-child{
+  .footer-last-column li:last-child {
     display: none;
-}
+  }
 }

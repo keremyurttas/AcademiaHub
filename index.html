@@ -9,15 +9,12 @@
     <link rel="stylesheet" href="./assets/style/css/general/index.css" />
     <link rel="stylesheet" href="./assets/style/css/general/footer.css" />
     <link rel="stylesheet" href="./assets/style/css/general/header.css" />
-
-    <script type="module" src="./js/main.js"></script>
   </head>
   <body>
-    <div class="main-page">
+    <!-- Header will render here -->
+    <main class="main-page">
       <section class="container main-page-bg-image">
         <div class="main-section">
-          <!-- <iframe src="./components/header.html" frameborder="0"></iframe> -->
-
           <div class="content">
             <h5 class="header-tag">For Better Future</h5>
             <h2 class="main-header">
@@ -28,13 +25,15 @@
               >Every day brings with it a fresh <br />
               set of learning possibilities.</span
             >
-            <a href="#courses" class="contact-us zoom-hover-effect"
+            <a
+              href="#courses-section-container"
+              class="discover zoom-hover-effect"
               >See Our Courses</a
             >
           </div>
 
           <div class="info-cards-container">
-            <!-- cards will render here -->
+            <!--information cards will render here -->
           </div>
         </div>
       </section>
@@ -42,7 +41,7 @@
         <div class="second-section">
           <img
             src="./assets/images/placeholder.png"
-            alt="a placeholder image"
+            alt="Placeholder image illustrating the concept of quality education"
           />
           <div class="second-section-content card-hover-effect">
             <hr class="primary-line" />
@@ -54,7 +53,9 @@
               Problems trying to resolve the conflict between the two major
               realms of Classical physics: Newtonian mechanics
             </p>
-            <a href="#courses" class="contact-us zoom-hover-effect"
+            <a
+              href="#courses-section-container"
+              class="discover zoom-hover-effect"
               >See Our Courses</a
             >
           </div>
@@ -80,27 +81,30 @@
               ><img src="./assets/images/fa-brands-6.svg" alt=""
             /></a>
             <a target="_blank" href="https://hooli.fi/"
-            ><img src="./assets/images/fa-brands-1.svg" alt=""
-          /></a>
-          <a target="_blank" href="https://www.lyft.com/"
-            ><img src="./assets/images/fa-brands-2.svg" alt=""
-          /></a>
-          <a target="_blank" href="https://www.unep.org/"
-            ><img src="./assets/images/fa-brands-3.svg" alt=""
-          /></a>
-          <a target="_blank" href="https://stripe.com/"
-            ><img src="./assets/images/fa-brands-4.svg" alt=""
-          /></a>
-          <a target="_blank" href="https://aws.amazon.com/"
-            ><img src="./assets/images/fa-brands-5.svg" alt=""
-          /></a>
-          <a target="_blank" href="https://www.reddit.com/"
-            ><img src="./assets/images/fa-brands-6.svg" alt=""
-          /></a>
+              ><img src="./assets/images/fa-brands-1.svg" alt=""
+            /></a>
+            <a target="_blank" href="https://www.lyft.com/"
+              ><img src="./assets/images/fa-brands-2.svg" alt=""
+            /></a>
+            <a target="_blank" href="https://www.unep.org/"
+              ><img src="./assets/images/fa-brands-3.svg" alt=""
+            /></a>
+            <a target="_blank" href="https://stripe.com/"
+              ><img src="./assets/images/fa-brands-4.svg" alt=""
+            /></a>
+            <a target="_blank" href="https://aws.amazon.com/"
+              ><img src="./assets/images/fa-brands-5.svg" alt=""
+            /></a>
+            <a target="_blank" href="https://www.reddit.com/"
+              ><img src="./assets/images/fa-brands-6.svg" alt=""
+            /></a>
           </div>
         </div>
       </section>
-      <section class="container courses-section-container">
+      <section
+        id="courses-section-container"
+        class="container courses-section-container"
+      >
         <div class="courses-section">
           <div class="courses-content">
             <h6 id="courses" class="header-tag">Practice Advice</h6>
@@ -115,10 +119,10 @@
           </div>
         </div>
       </section>
-    </div>
+    </main>
   </body>
+  <script type="module" src="./js/main.js"></script>
   <script src="./js/scrollEffect.js"></script>
-
   <script type="module">
     import {
       renderCourseCards,

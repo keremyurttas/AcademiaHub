@@ -1,29 +1,22 @@
 export default function createHeader() {
   const header = document.createElement("nav");
-  header.classList.add("navbar");
-  header.classList.add("container");
+  header.classList.add("navbar", "container");
   header.innerHTML = `
-  
-  <a class="brand" target="_top" href="/index.html">Brandname</a>
-      <a class="contact-us" target="_top" href="/index.html#courses"
+
+  <a class="brand" href="/index.html">Brandname</a>
+      <a class="discover zoom-hover-effect" href="/index.html#courses-section-container"
         >DISCOVER
         <img
-          class="arrow"
-          src="../assets/images/arrow-right.svg"
+          class="arrow "
+          src="/assets/images/arrow-right.svg"
           alt="right arrow"
         />
       </a>
      
   `;
-  const mainPage = document.querySelector(".main-page");
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 10) {
-      header.classList.add("scrolled");
-      mainPage.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-      mainPage.classList.remove("scrolled");
-    }
+    const isScrolled = window.scrollY > 10;
+    header.classList.toggle("scrolled", isScrolled);
   });
   return header;
 }

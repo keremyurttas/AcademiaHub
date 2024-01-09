@@ -1,18 +1,53 @@
 @import "./assets/style/css/colors/colors.css";
 
-section{
+section {
   opacity: 1;
+
+}
+.product{
+  animation: rotateY .5s;
 }
 
 .product-image {
-  
-    height: 10%;
+  height: 10%;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+
 }
-.product-image, .product-details{
-    width: 30vw;
-    margin: auto;
+.product-image-zoom-on-hover:hover{
+  transform: scale(1.2);
+  transition-duration: .5s;
+  cursor: zoom-in;
+}
+.product-details:hover .get-contact{
+  transform: scale(1.1);
+  transition-duration: .3s;
+}
+.product-image,
+.product-details {
+  width: 30vw;
+  margin: auto;
+ 
+}
+@-webkit-keyframes rotateY {
+  0% {
+    transform: rotateY(60deg);
+  }
+  20% {
+    transform: rotateY(120deg);
+  }
+  40% {
+    transform: rotateY(180deg);
+  }
+  60% {
+    transform: rotateY(240deg);
+  }
+  80% {
+    transform: rotateY(300deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 .product {
   color: white;
@@ -39,7 +74,6 @@ section{
   background-color: var(--secondary-background-color);
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-
 }
 .product-details-bottom span {
   font-size: 1.5rem;
@@ -81,22 +115,23 @@ section{
   gap: 1rem;
   margin: auto;
   padding: 1rem;
-  background-color: var(--tertary-background-color)
+  background-color: var(--tertiary-background-color);
 }
 .product-details .description {
   color: white;
   font-size: 1rem;
 }
 @media only screen and (max-width: 768px) {
-.sales-count img{
+  .sales-count img {
     width: 15px;
-} 
-.sales-count{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-}
-  .product-image,.product-details{
+  }
+  .sales-count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .product-image,
+  .product-details {
     width: 100%;
   }
 }
