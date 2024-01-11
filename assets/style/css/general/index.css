@@ -234,6 +234,7 @@ body {
 }
 .card-hover-effect:hover {
   transform: scale(1.1);
+  z-index: 10;
 }
 .course-card:hover a.view {
   background: var(--primary-background-color);
@@ -278,6 +279,7 @@ body {
 .zoom-hover-effect:hover {
   transition-duration: 300ms;
   transform: scale(1.2);
+  z-index: 10;
 }
 section {
   opacity: 0;
@@ -359,6 +361,7 @@ section.show {
   }
   .course-cards {
     flex-direction: column;
+    gap: 3rem;
   }
   .course-card,
   .course-card img {
