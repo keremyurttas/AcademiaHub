@@ -1,9 +1,6 @@
-@import "./assets/style/css/colors/colors.css";
+@import "../colors/colors.css";
+@import "../animations/animations.css";
 
-section {
-  opacity: 1;
-
-}
 .product{
   animation: rotateY .5s;
 }
@@ -29,26 +26,7 @@ section {
   margin: auto;
  
 }
-@-webkit-keyframes rotateY {
-  0% {
-    transform: rotateY(60deg);
-  }
-  20% {
-    transform: rotateY(120deg);
-  }
-  40% {
-    transform: rotateY(180deg);
-  }
-  60% {
-    transform: rotateY(240deg);
-  }
-  80% {
-    transform: rotateY(300deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-}
+
 .product {
   color: white;
   display: flex;

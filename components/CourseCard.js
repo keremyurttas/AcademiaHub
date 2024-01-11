@@ -16,7 +16,7 @@ export default function createCourseCard({
   courseCard.innerHTML = `
 
   <div class="course-card-top">
-    <img src=${img} alt=${productName + " image"} />
+    <img class="course-card-image" src=${img} alt=${productName + " image"} />
     <span class="sale header-tag">Sale</span>
     <div class="inspect-icon">
       <img src="./assets/images/inspect.svg" alt="" />

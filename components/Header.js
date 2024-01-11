@@ -14,6 +14,7 @@ export default function createHeader() {
       </a>
      
   `;
+
   window.addEventListener("scroll", () => {
     const isScrolled = window.scrollY > 10;
     header.classList.toggle("scrolled", isScrolled);
