@@ -3,7 +3,7 @@ export default function createHeader() {
   header.classList.add("navbar", "container");
   header.innerHTML = `
 
-  <a class="brand" href="/index.html">Brandname</a>
+  <a class="brand" href="/index.html">AcademiaHub</a>
       <a class="discover zoom-hover-effect" href="/index.html#courses-section-container"
         >DISCOVER
         <img
